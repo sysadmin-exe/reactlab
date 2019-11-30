@@ -1,0 +1,13 @@
+sudo: required
+
+services: 
+  - docker
+
+before_install:
+  - docker build -t sysadmin-exe/reactlab -f Dockerfile.dev .
+
+script:
+  - docker run sysadmin-exe/reactlab npm run test -- --coverage
+
+  
+
