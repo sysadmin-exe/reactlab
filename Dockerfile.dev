@@ -1,0 +1,13 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+
+#USING VOLUMES
+#VOLUME 
+
+CMD ["npm", "run", "start"]
