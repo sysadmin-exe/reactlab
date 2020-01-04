@@ -2,9 +2,16 @@
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
         {
-            "name":"reactweb",
+            "name": "reactweb",
             "image": "sysadminexe/reactlab",
-            "hostname":"reactweb"
+            "hostname": "reactweb",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort":3000
+                }
+            ]
         }
     ]
 }
