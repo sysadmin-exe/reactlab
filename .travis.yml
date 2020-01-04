@@ -15,5 +15,9 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take images and push to docker hub
   - docker push sysadminexe/reactlab
+
+branches:
+  only:
+    - master
   
 
